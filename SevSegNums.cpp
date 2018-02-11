@@ -100,3 +100,6 @@ void number9(int seg[]) {
   digitalWrite(seg[5], LOW);
   digitalWrite(seg[6], LOW);
 }
+
+num_func number[] = { number0, number1, number2, number3, number4, number5, number6, number7, number8, number9 };
+

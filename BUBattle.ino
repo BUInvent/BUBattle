@@ -1,7 +1,10 @@
 
 #include "SevSegNums.h"
 
-int awayTens[7] = {2, 3, 4, 5, 6, 7, 8};
+int awayTensBoard[7] = {2, 3, 4, 5, 6, 7, 8};
+
+int awayTens;
+
 String data;
 String homeScore;
 String awayScore;
@@ -12,7 +15,7 @@ String seconds;
 void setup() {
 
   for (int i = 0; i < 7; i++) {
-    pinMode(awayTens[i], OUTPUT);
+    pinMode(awayTensBoard[i], OUTPUT);
   }
 
   Serial.begin(9600);
@@ -29,7 +32,7 @@ void loop() {
     minutes = Serial.readStringUntil(',');
     seconds = Serial.readStringUntil('\n');
 
-    Serial.print("data = ");
+    Serial.print("\ndata = ");
     Serial.println(data);
     Serial.print("homeScore = ");
     Serial.println(homeScore);
@@ -41,6 +44,12 @@ void loop() {
     Serial.println(minutes);
     Serial.print("seconds = ");
     Serial.println(seconds);
+
+    if(data != "data") return;
+    awayTens = awayScore[awayScore.length()-2] - '0';
+    Serial.println(awayTens);
+    number[awayTens](awayTensBoard);
+    
   }
 }
 
