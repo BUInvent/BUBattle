@@ -2,8 +2,12 @@
 #include "SevSegNums.h"
 
 int awayTens[7] = {2, 3, 4, 5, 6, 7, 8};
-void number0(int seg[]);
-void number1(int seg[]);
+String data;
+String homeScore;
+String awayScore;
+String period;
+String minutes;
+String seconds;
 
 void setup() {
 
@@ -16,35 +20,28 @@ void setup() {
 
 void loop() {
 
-  number0(awayTens);
-  delay(1000);
+  if (Serial.available()) {
+    
+    data = Serial.readStringUntil(',');
+    homeScore = Serial.readStringUntil(',');
+    awayScore = Serial.readStringUntil(',');   
+    period = Serial.readStringUntil(',');
+    minutes = Serial.readStringUntil(',');
+    seconds = Serial.readStringUntil('\n');
 
-  number1(awayTens);
-  delay(1000);
-
-  number2(awayTens);
-  delay(1000);
-
-  number3(awayTens);
-  delay(1000);
-
-  number4(awayTens);
-  delay(1000);
-
-  number5(awayTens);
-  delay(1000);
-
-  number6(awayTens);
-  delay(1000);
-
-  number7(awayTens);
-  delay(1000);
-
-  number8(awayTens);
-  delay(1000);
-
-  number9(awayTens);
-  delay(1000);
+    Serial.print("data = ");
+    Serial.println(data);
+    Serial.print("homeScore = ");
+    Serial.println(homeScore);
+    Serial.print("awayScore = ");
+    Serial.println(awayScore);
+    Serial.print("period = ");
+    Serial.println(period);
+    Serial.print("minutes = ");
+    Serial.println(minutes);
+    Serial.print("seconds = ");
+    Serial.println(seconds);
+  }
 }
 
 
