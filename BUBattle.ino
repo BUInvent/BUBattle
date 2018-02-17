@@ -1,9 +1,12 @@
 
 #include "SevSegNums.h"
+#include "Arduino.h"
 
 int awayTensBoard[7] = {2, 3, 4, 5, 6, 7, 8};
+int awayOnesBoard[7] = {9, 10, 11, 12, 13, 22, 23};
 
 int awayTens;
+int awayOnes;
 
 String data;
 String homeScore;
@@ -16,6 +19,7 @@ void setup() {
 
   for (int i = 0; i < 7; i++) {
     pinMode(awayTensBoard[i], OUTPUT);
+    pinMode(awayOnesBoard[i], OUTPUT);
   }
 
   Serial.begin(9600);
@@ -47,8 +51,9 @@ void loop() {
 
     if(data != "data") return;
     awayTens = awayScore[awayScore.length()-2] - '0';
-    Serial.println(awayTens);
+    awayOnes = awayScore[awayScore.length()-1] - '0';
     number[awayTens](awayTensBoard);
+    number[awayOnes](awayOnesBoard);
     
   }
 }
