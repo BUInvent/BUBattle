@@ -43,6 +43,19 @@ void setup() {
 
   Serial.begin(9600);
   matrix.begin(0x70);
+
+  displayNumber[0](awayTensBoard);
+  displayNumber[0](awayOnesBoard);
+  displayNumber[0](homeTensBoard);
+  displayNumber[0](homeOnesBoard);
+  displayNumber[0](periodBoard);
+  
+  matrix.writeDigitNum(0, 0, false);
+  matrix.writeDigitNum(1, 0, false);
+  matrix.drawColon(true);
+  matrix.writeDigitNum(3, 0, false);
+  matrix.writeDigitNum(4, 0, false);
+  matrix.writeDisplay();
   
 }
 
