@@ -1,4 +1,10 @@
 
+/*
+    Project BUScore by Jason
+    This file is for the "BattleShip" (Arduino Mega)
+    It has functions for each number and sets the needed segments high or low
+*/
+
 #include "SevSegNums.h"
 
 void zero(int seg[]) {
