@@ -1,7 +1,7 @@
 
 #include "SevSegNums.h"
 
-void number0(int seg[]) {
+void zero(int seg[]) {
   digitalWrite(seg[0], LOW);
   digitalWrite(seg[1], LOW);
   digitalWrite(seg[2], LOW);
@@ -11,7 +11,7 @@ void number0(int seg[]) {
   digitalWrite(seg[6], HIGH);
 }
 
-void number1(int seg[]) {
+void one(int seg[]) {
   digitalWrite(seg[0], HIGH);
   digitalWrite(seg[1], LOW);
   digitalWrite(seg[2], LOW);
@@ -21,7 +21,7 @@ void number1(int seg[]) {
   digitalWrite(seg[6], HIGH);
 }
 
-void number2(int seg[]) {
+void two(int seg[]) {
   digitalWrite(seg[0], LOW);
   digitalWrite(seg[1], LOW);
   digitalWrite(seg[2], HIGH);
@@ -31,7 +31,7 @@ void number2(int seg[]) {
   digitalWrite(seg[6], LOW);
 }
 
-void number3(int seg[]) {
+void three(int seg[]) {
   digitalWrite(seg[0], LOW);
   digitalWrite(seg[1], LOW);
   digitalWrite(seg[2], LOW);
@@ -41,7 +41,7 @@ void number3(int seg[]) {
   digitalWrite(seg[6], LOW);
 }
 
-void number4(int seg[]) {
+void four(int seg[]) {
   digitalWrite(seg[0], HIGH);
   digitalWrite(seg[1], LOW);
   digitalWrite(seg[2], LOW);
@@ -51,7 +51,7 @@ void number4(int seg[]) {
   digitalWrite(seg[6], LOW);
 }
 
-void number5(int seg[]) {
+void five(int seg[]) {
   digitalWrite(seg[0], LOW);
   digitalWrite(seg[1], HIGH);
   digitalWrite(seg[2], LOW);
@@ -61,7 +61,7 @@ void number5(int seg[]) {
   digitalWrite(seg[6], LOW);
 }
 
-void number6(int seg[]) {
+void six(int seg[]) {
   digitalWrite(seg[0], LOW);
   digitalWrite(seg[1], HIGH);
   digitalWrite(seg[2], LOW);
@@ -71,7 +71,7 @@ void number6(int seg[]) {
   digitalWrite(seg[6], LOW);
 }
 
-void number7(int seg[]) {
+void seven(int seg[]) {
   digitalWrite(seg[0], LOW);
   digitalWrite(seg[1], LOW);
   digitalWrite(seg[2], LOW);
@@ -81,7 +81,7 @@ void number7(int seg[]) {
   digitalWrite(seg[6], HIGH);
 }
 
-void number8(int seg[]) {
+void eight(int seg[]) {
   digitalWrite(seg[0], LOW);
   digitalWrite(seg[1], LOW);
   digitalWrite(seg[2], LOW);
@@ -91,7 +91,7 @@ void number8(int seg[]) {
   digitalWrite(seg[6], LOW);
 }
 
-void number9(int seg[]) {
+void nine(int seg[]) {
   digitalWrite(seg[0], LOW);
   digitalWrite(seg[1], LOW);
   digitalWrite(seg[2], LOW);
@@ -101,5 +101,15 @@ void number9(int seg[]) {
   digitalWrite(seg[6], LOW);
 }
 
-num_func displayNumber[] = { number0, number1, number2, number3, number4, number5, number6, number7, number8, number9 };
+void finalScore(int seg[]) {
+  digitalWrite(seg[0], LOW);
+  digitalWrite(seg[1], HIGH);
+  digitalWrite(seg[2], HIGH);
+  digitalWrite(seg[3], HIGH);
+  digitalWrite(seg[4], LOW);
+  digitalWrite(seg[5], LOW);
+  digitalWrite(seg[6], LOW);
+}
+
+num_func displayNumber[] = { zero, one, two, three, four, five, six, seven, eight, nine, finalScore };
 
