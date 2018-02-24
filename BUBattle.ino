@@ -74,8 +74,8 @@ void loop() {
     
     // if we receive data, parse it
     data = Serial.readStringUntil(',');
+    awayScore = Serial.readStringUntil(',');
     homeScore = Serial.readStringUntil(',');
-    awayScore = Serial.readStringUntil(',');   
     period = Serial.readStringUntil(',');
     minutes = Serial.readStringUntil(',');
     seconds = Serial.readStringUntil('\n');
