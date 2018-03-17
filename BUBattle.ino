@@ -15,10 +15,10 @@
 Adafruit_7segment matrix = Adafruit_7segment();
 
 // pinouts for each 7 segment display
-int awayTensBoard[7] = {2, 3, 4, 5, 6, 7, 8};
-int awayOnesBoard[7] = {9, 10, 11, 12, 13, 22, 23};
-int homeTensBoard[7] = {24, 25, 26, 27, 28, 29, 30};
-int homeOnesBoard[7] = {32, 33, 34, 35, 36, 37, 38};
+int homeOnesBoard[7] = {2, 3, 4, 5, 6, 7, 8};
+int homeTensBoard[7] = {9, 10, 11, 12, 13, 22, 23};
+int awayOnesBoard[7] = {24, 25, 26, 27, 28, 29, 30};
+int awayTensBoard[7] = {32, 33, 34, 35, 36, 37, 38};
 int periodBoard[7] = {40, 41, 42, 43, 44, 45, 46};
 
 int awayTens;
